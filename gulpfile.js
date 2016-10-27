@@ -59,7 +59,7 @@ gulp.task('script',function(){
                                                                                                 
 gulp.task('build', ['webpack'], function() {
     console.log(process.env.NODE_ENV);
-    gulp.start('style','script')
+    gulp.start('style','script','html')
 })
 
 gulp.task('dev', ['clean'], function() {

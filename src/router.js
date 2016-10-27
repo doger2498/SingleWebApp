@@ -11,27 +11,33 @@ export default function(router) {
         },
 		
 		// 首页
-		'/home':{
+		'/home': {
 			name:'home',
             component: require('./views/home.vue')
         },
 
         // 问答
-		'/question':{
+		'/question': {
 			name:'question',
             component: require('./views/question.vue')
         },
 
         // 私信
-		'/message':{
+		'/message': {
 			name:'home',
             component: require('./views/message.vue')
         },
 
         // 我的
-		'/user':{
+		'/user': {
 			name:'user',
             component: require('./views/user.vue')
+        },
+
+        // button
+        '/btn': {
+            name:'btn',
+            component: require('./components/HoverButton.vue')
         }
 	});
 }

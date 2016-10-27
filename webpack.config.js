@@ -29,8 +29,8 @@ module.exports = {
         hot: false,
         inline: true,
         grogress: true,
-        port:3000,
-        host:'10.57.224.64'
+        port:4000,
+        host:'127.0.0.1'
     },
     // 加载器
     module: {
@@ -70,8 +70,13 @@ module.exports = {
             {
                 test: /\.(woff|svg|eot|ttf|woff2)$/,
                 loader: 'url-loader?limit=50000'
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url',
+                query: {
+                }
             }
-
         ]
     },
     // .vue 的配置
@@ -103,9 +108,9 @@ module.exports.plugins = [
     new TransferWebpackPlugin([
         { from: 'img', to: 'img'}
     ], path.resolve(__dirname, "src")),
-    new TransferWebpackPlugin([
-        { from: 'css', to: 'css'}
-    ], path.resolve(__dirname, "src")),
+    // new TransferWebpackPlugin([
+    //     { from: 'css', to: 'css'}
+    // ], path.resolve(__dirname, "src")),
     new TransferWebpackPlugin([
         { from: 'libs', to: 'libs'}
     ], path.resolve(__dirname, "src"))
