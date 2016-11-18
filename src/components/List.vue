@@ -12,12 +12,21 @@
 	export default {
 		data() {
 			return {
-				list: ['a','b']
+				
 			}
 		},
 
 		ready() {
 			
+		},
+
+		vuex: {
+			getters: {
+				list: ({questionList}) => questionList.data
+			},
+			actions: {
+
+			}
 		}
 	}
 </script>

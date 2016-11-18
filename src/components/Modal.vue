@@ -72,7 +72,7 @@
     padding: 0;
 }
 ._card {
-
+    margin: 0!important;
 }
 ._title {
     font-size: .65rem;

@@ -93,6 +93,7 @@
     export default {
         ready() {
             this.getUserInfo();
+            console.log(this);
         },
 
         data(){

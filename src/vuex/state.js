@@ -25,6 +25,18 @@ const state = {
 			*/
 			isSend: false
 		}
+	},
+
+	/**
+ 	 * @ 主页
+	*/
+	questionList: {
+		// 主要数据
+		data: [],
+		params: {
+			url: '',
+			params: ''
+		}
 	}
 }
 

@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="./libs/sm.css">
 	<link rel="Shortcut Icon" href="http://www.xingdongpeng.com/favicon.ico" />
+    <script>
+        setSize();
+        var heightRem;
+        function setSize(){
+            var html = document.documentElement;        
+            var iWidth  = html.getBoundingClientRect().right;
+            html.style.fontSize = iWidth/20 +"px";
+            heightRem =  window.screen.height *7.5/iWidth;
+        }
+    </script>
 	<script src='./libs/zepto.min.js'></script>
 </head>
 <body id="app">
@@ -14,9 +24,9 @@
         <router-view></router-view>
     </div>
     <Bar class="bar-tab" v-if="isWelcome">
-        <Bar-item path="/home" label="聊天室" icon="home"></Bar-item>
-        <Bar-item path="/question" label="问答­" icon="edit"></Bar-item>
-        <Bar-item path="/message" label="私信" icon="message"></Bar-item>
+        <Bar-item path="/home" label="主页" icon="home"></Bar-item>
+        <Bar-item path="/game" label="游戏­" icon="app"></Bar-item>
+        <Bar-item path="/message" label="聊天" icon="message"></Bar-item>
         <Bar-item path="/user" label="我的" icon="me"></Bar-item>
   	</Bar>
     <Back-Ground open="true"></Back-Ground>

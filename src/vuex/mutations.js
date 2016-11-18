@@ -74,6 +74,22 @@ const mutations = {
     // 清空ajax参数
     CLEARUPAJAXPARAMS(state, data) {
         state.ajax.params = {};
+    },
+
+
+    /**
+     * @ 主页
+    */
+
+    LOADNEXTPAGE(state, data) {
+        var params = state.questionList.params.params
+        vue.http({
+            url: config.remoteServer.baseUrl + 'getQuestions/',
+            method: 'get',
+            params: params,
+        }).then((result) => {
+            state.questionList.data = result.data
+        });
     }
 }
 

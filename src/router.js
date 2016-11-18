@@ -16,15 +16,15 @@ export default function(router) {
             component: require('./views/home.vue')
         },
 
-        // 问答
-		'/question': {
-			name:'question',
-            component: require('./views/question.vue')
+        // 游戏
+		'/game': {
+			name:'game',
+            component: require('./views/game.vue')
         },
 
-        // 私信
+        // 聊天
 		'/message': {
-			name:'home',
+			name:'message',
             component: require('./views/message.vue')
         },
 
@@ -32,12 +32,6 @@ export default function(router) {
 		'/user': {
 			name:'user',
             component: require('./views/user.vue')
-        },
-
-        // button
-        '/btn': {
-            name:'btn',
-            component: require('./components/HoverButton.vue')
         }
 	});
 }

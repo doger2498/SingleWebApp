@@ -7,6 +7,7 @@
 // nodejs中的path对象   用于处理目录的对象，提高开发效率
 var path = require('path');
 var webpack = require("webpack");
+var config = require('./config.js');
 var TARGET = process.env.npm_lifecycle_event;
 var TransferWebpackPlugin = require('transfer-webpack-plugin');
 module.exports = {
@@ -29,8 +30,8 @@ module.exports = {
         hot: false,
         inline: true,
         grogress: true,
-        port:4000,
-        host:'127.0.0.1'
+        port:config.remoteServer.port,
+        host:config.remoteServer.host
     },
     // 加载器
     module: {

@@ -27,24 +27,25 @@
 <style scoped>
 .message {
     width: 100%;
-    height: 2.8rem;
+    height: 3.8rem;
 }
 .nickName {
     position: absolute;
     top: -.7rem;
-    font-size: .2rem;
+    font-size: .5rem;
     color: rgb(150,130,130);
 }
 .messageBody {
     border-radius: .2rem;
     position: absolute;
-    padding: .2rem .4rem .2rem .4rem;
-    font-size: .26rem;
+    padding: .1rem .2rem .1rem .2rem;
+    font-size: .8rem;
     max-width: 10rem;
+    line-height: 1.6rem;
 }
 .avatar-icon {
-    width: 1.66rem;
-    height: 1.66rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background-size: cover;
     display: block;
     position: absolute;
@@ -62,12 +63,12 @@
 }
 .left > .messageBody {
     background-color: rgba(46, 79, 196, 0.85);
-    left: 2.5rem;
+    left: 3.5rem;
     top: .6rem;
 }
 .right > .messageBody {
     background-color: rgba(9, 196, 46, 0.8);
-    right: 2.5rem;
+    right: 3.5rem;
     top: .6rem;
 }
 .left > .avatar-icon {

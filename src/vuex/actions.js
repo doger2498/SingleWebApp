@@ -35,3 +35,12 @@ export const updateAjaxParams = function ({dispatch, state}, data) {
 export const clearUpAjaxParams = function ({dispatch, state}, data) {
 	dispatch('CLEARUPAJAXPARAMS', data)
 }
+
+
+/**
+ * @ 主页
+*/
+
+export const loadNextPage = function ({dispatch, state}, data) {
+	dispatch('LOADNEXTPAGE', data)
+}
