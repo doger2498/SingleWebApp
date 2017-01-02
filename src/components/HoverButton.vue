@@ -1,9 +1,10 @@
 <template>
-    <a :class="isVisible == 'true'? NoClass : hiddenClass">+</a>
+    <a :class="isVisible == true? NoClass : hiddenClass" @click="click" >+</a>
 </template>
 
 <script>
 export default {
+
     data() {
         return {
             hiddenClass: 'button _fixed button-danger _btn _transition _z-index hidden',
@@ -11,7 +12,14 @@ export default {
         }
     },
 
-    props: ['isVisible']
+    props: ['isVisible'],
+
+    methods: {
+        click() {
+            this.$parent.HoverButtonClick();
+        }
+    }
+
 }
 </script>
 <style scoped>

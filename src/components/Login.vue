@@ -92,7 +92,7 @@
                                                 <div class="item-inner">
                                                     <div class="item-title label _input_bg">确认密码：</div>
                                                     <div class="item-input">
-                                                        <input class="_input_bg" @keyup.enter="clickReg(regData)" type="password" v-model="passwordConfirm" placeholder="Confirm">
+                                                        <input class="_input_bg" @keyup.enter="clickReg(regData)" type="password" v-model="regConfirm" placeholder="Confirm">
                                                     </div>
                                                 </div>
                                             </div>
@@ -134,6 +134,7 @@
                     return
                 }
                 if(regData.password !== regData.passwordConfirm) {
+                    console.log( regData )
                     alert('密码不匹配')
                     return
                 }
